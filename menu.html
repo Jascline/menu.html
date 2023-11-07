@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Restaurant Menu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #eb2f96, #ff3a9e);
+            color: white;
+            text-align: center;
+            padding: 10px 0; /* Smaller header padding */
+            font-family: 'Arial Black', sans-serif;
+            position: relative;
+        }
+
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: transparent; /* Change background color to transparent */
+            border-radius: 10px; /* Remove border-radius */
+            box-shadow: none; /* Remove box shadow */
+        }
+
+        h1 {
+            font-size: 30px; /* Slightly smaller font size */
+            margin: 10px 0;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns in the top row */
+            grid-template-rows: repeat(3, 1fr); /* Three rows */
+            grid-gap: 20px; /* Spacing between grid items */
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            margin-left: 90px; /* Add a left margin to move the menu to the left */
+        }
+
+        .menu-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px #888;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .menu-item.middle {
+            margin: 0; /* Remove margin for middle items in grid layout */
+        }
+
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #eb2f96;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #d81b60;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-background"></div>
+        <div class="header-content">
+            <h1>Welcome to Happy Restaurant</h1>
+            <p>Explore Our Delicious Menu</p>
+            <button id="changeHeaderTextButton">Change Header Text</button>
+            <div id="dynamicHeaderText"></div>
+        </div>
+    </header>
+     
+    <div id="menu">
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/originals/c3/b8/41/c3b8411be1bd9fe2814f0fb9a56772b8.jpg" alt="Strawberry Donut">
+            <h2>Strawberry Donut</h2>
+            <p>Crunchy and Flavorful</p>
+            <p class="price">RM10.99 / 4 PCS</p>
+        </div>
+        <div class="menu-item middle">
+            <img src="https://i.pinimg.com/originals/4e/13/a6/4e13a6c6b8a4408107c9287dd2405eb4.jpg" alt="Strawberry Coffee">
+            <h2>Strawberry Coffee</h2>
+            <p>Full of Freshness</p>
+            <p class="price">RM12.99 / 1 CUP</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/originals/1a/b1/8c/1ab18cc27c19c0416c7b15812c4f0980.jpg" alt="Strawberry Cake">
+            <h2>Strawberry Cake</h2>
+            <p>One Bite Happiness</p>
+            <p class="price">RM25/PER</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.loveandoliveoil.com/wp-content/uploads/2019/05/strawberry-cake-roll-FEAT.jpg" alt="Strawberry Swiss Roll">
+            <h2>Strawberry Swiss Roll</h2>
+            <p>Sweetness Incredible</p>
+            <p class="price">RM15/PER</p>
+        </div>
+        <div class="menu-item middle">
+            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2019-06/12/15/enhanced/buzzfeed-prod-web-05/enhanced-buzz-17759-1560369089-0.jpg" alt="Strawberry Macaron">
+            <h2>Strawberry Macaron</h2>
+            <p>Full of Happiness</p>
+            <p class="price">RM19.99 / 4 PCS</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/564x/e5/fb/5a/e5fb5af4a1d2da8dafa0c02a3e0fdf0d.jpg" alt="Strawberry Ice Cream">
+            <h2>Strawberry Ice Cream</h2>
+            <p>Yummy Tasty</p>
+            <p class="price">RM20/PER</p>
+        </div>
+        <div class="menu-item">
+            <img src="http://2.bp.blogspot.com/-3dyvKMG4-2g/T9GEl03dVHI/AAAAAAAACKU/GbCzgte3ORo/s1600/IMG_3205.jpg" alt="Strawberry Cupcake">
+            <h2>Strawberry Cupcake</h2>
+            <p>Sweet But Not Overload</p>
+            <p class="price">RM8.90/PER</p>
+        </div>
+        <div class="menu-item middle">
+            <img src="https://i.pinimg.com/originals/64/31/71/643171f3827cd69c4cb283830157df56.jpg" alt="Strawberry Soda">
+            <h2>Strawberry Soda</h2>
+            <p>Refreshing Mind when drink it</p>
+            <p class="price">RM18/PER GLASS</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://lh4.ggpht.com/1_IfC0jDNl8LoO6LSL3ZHP8mQA9wj2g8iIVTGUrQSJhtOnmZbbF8sqcpqqn8YGqfaiO9yg2_jZkYDOxLDmm85g=w1200-h630-pp-rj-v1-e365" alt="Strawberry Lolipop">
+            <h2>Strawberry Lolipop</h2>
+            <p>Chilhood Memories Flash Back</p>
+            <p class="price">RM6/PER</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const changeHeaderTextButton = document.getElementById('changeHeaderTextButton');
+            const dynamicHeaderText = document.getElementById('dynamicHeaderText');
+            const headerTexts = [
+                'Welcome to Happy Restaurant',
+                'Taste the Magic of Strawberries',
+                'Delicious Strawberry Creations',
+                'Your Strawberry Paradise',
+                'Savor the Strawberry Delights',
+            ];
+
+            // Function to change the header text randomly
+            function changeHeaderText() {
+                const randomIndex = Math.floor(Math.random() * headerTexts.length);
+                const newText = headerTexts[randomIndex];
+                dynamicHeaderText.textContent = newText;
+            }
+
+            // Add a click event listener to the button
+            changeHeaderTextButton.addEventListener('click', changeHeaderText);
+        });
+    </script>
+</body>
+</html>
